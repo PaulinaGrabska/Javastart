@@ -48,7 +48,6 @@ public class Main {
         printInfo(drink2);
         totalAmount(drink2);
 
-
     }
 
     // printing information (all details) about drink
