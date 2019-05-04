@@ -2,6 +2,7 @@ package programRepair;
 
 
 class MovieLibrary {
+    
     public static void main(String[] args) {
         Movie movie = new Movie();
         movie.title = "Forrest Gump";
