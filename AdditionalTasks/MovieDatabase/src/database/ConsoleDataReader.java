@@ -11,6 +11,10 @@ public class ConsoleDataReader {
 
     Scanner user = new Scanner(System.in);
 
+    public int numberOfActors = 0;
+    public int numberOfMovies = 0;
+    public int numberOfSeries = 0;
+
 
     public Movie createMovie() {
 
@@ -48,6 +52,7 @@ public class ConsoleDataReader {
     }
 
 
+
     public Series createSeries(){
 
         Series series;
@@ -76,11 +81,11 @@ public class ConsoleDataReader {
         double rating = user.nextDouble();
         //user.nextLine();
 
-        if(rating <0 || rating>10 ){
-            series = null;
-        }else{
-            series = new Series(seriesName, seasons,episodes, producent, type, description, rating);
-        }
+            if(rating <0 || rating>10 ){
+                series = null;
+            }else{
+                series = new Series(seriesName, seasons,episodes, producent, type, description, rating);
+            }
 
         return series;
 
