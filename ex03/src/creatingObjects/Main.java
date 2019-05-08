@@ -15,7 +15,6 @@ public class Main {
      desk2.height = 80;
      desk2.width = 150;
 
-
         System.out.printf("Dismensions of desk 1 : %dcm x %dcm x %dcm \n",desk1.length, desk1.width, desk1.height);
         System.out.printf("Dismensions of desk 2 : %dcm x %dcm x %dcm \n",desk2.length, desk2.width, desk2.height);
 
