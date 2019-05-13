@@ -11,18 +11,18 @@ wyświetl status, włącz telewizor i ponownie wyświetl status, wyłącz telewi
 
 public class Televisor {
 
-    int status;
+    boolean status;
 
     public void turnOn(){
-        status = 1;
+        status = true;
     }
 
     public void turnOff(){
-        status = 0;
+        status = false;
     }
 
     public void showStatus(){
-        if(status==1) {
+        if(status==true) {
             System.out.println("Tv is turn on");
         }else{
             System.out.println("Tv is turn off");
