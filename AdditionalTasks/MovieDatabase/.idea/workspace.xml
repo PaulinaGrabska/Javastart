@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9974c14-e6bf-4c2a-ba20-88a95c941b63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/MovieDatabase/database/ApplicationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/MovieDatabase/database/ApplicationDatabase.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/app/Filmueb.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationDatabase.java" afterDir="false" />
@@ -134,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="339" />
     <option name="y" value="50" />
     <option name="width" value="1291" />
@@ -226,15 +228,16 @@
       <workItem from="1557242256819" duration="9110000" />
       <workItem from="1557499900225" duration="1598000" />
       <workItem from="1557845546090" duration="9049000" />
-      <workItem from="1557917428595" duration="334000" />
+      <workItem from="1557917428595" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49646000" />
+    <option name="totallyTimeSpent" value="49908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="339" y="50" width="1291" height="825" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18602762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
