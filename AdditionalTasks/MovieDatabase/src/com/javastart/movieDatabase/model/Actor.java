@@ -1,4 +1,4 @@
-package database;
+package com.javastart.movieDatabase.model;
 
 public class Actor {
 

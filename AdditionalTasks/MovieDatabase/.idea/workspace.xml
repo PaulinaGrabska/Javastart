@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9974c14-e6bf-4c2a-ba20-88a95c941b63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/app/Filmueb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ConsoleDataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Filmueb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Filmueb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/ConsoleDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/ConsoleDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MovieDatabase/app/Filmueb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MovieDatabase/app/Filmueb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MovieDatabase/database/ConsoleDataReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MovieDatabase/database/ConsoleDataReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Filmueb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ApplicationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ApplicationDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ConsoleDataReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Series.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ex02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex02/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/drinks/Drink.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/drinks/Drink.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/drinks/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/drinks/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/programRepair/MovieLibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex02/out/production/Javastart_ex02/programRepair/MovieLibrary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ex03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ex03/ex3.2-sentences completion.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex03/ex3.2-sentences completion.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ex03/out/production/ex03/creatingObjects/Desk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex03/out/production/ex03/creatingObjects/Desk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ex03/out/production/ex03/creatingObjects/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex03/out/production/ex03/creatingObjects/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ex03/src/creatingObjects/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ex03/src/creatingObjects/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,38 +38,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/Filmueb.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/app/Filmueb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/ConsoleDataReader.java">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/Actor.java">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ConsoleDataReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/Movie.java">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -62,7 +84,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/Series.java">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Movie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Series.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -94,16 +125,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/startClass/Filmueb.java" />
-        <option value="$PROJECT_DIR$/src/database/ConsoleDataReader.java" />
         <option value="$PROJECT_DIR$/src/app/Filmueb.java" />
+        <option value="$PROJECT_DIR$/src/database/ConsoleDataReader.java" />
+        <option value="$PROJECT_DIR$/src/database/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/database/ApplicationDatabase.java" />
+        <option value="$PROJECT_DIR$/src/model/ApplicationDatabase.java" />
+        <option value="$PROJECT_DIR$/src/com/javastart/movieDatabase/app/Filmueb.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2088" />
-    <option name="y" value="16" />
-    <option name="width" value="1484" />
-    <option name="height" value="1007" />
+    <option name="x" value="339" />
+    <option name="y" value="50" />
+    <option name="width" value="1291" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -111,8 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,22 +158,12 @@
               <item name="MovieDatabase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MovieDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MovieDatabase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MovieDatabase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MovieDatabase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,11 +191,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Filmueb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Filmueb" />
+      <option name="MAIN_CLASS_NAME" value="com.javastart.movieDatabase.app.Filmueb" />
       <module name="MovieDatabase" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value="com.javastart.movieDatabase.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,17 +222,21 @@
       <workItem from="1557083471726" duration="254000" />
       <workItem from="1557083897843" duration="5164000" />
       <workItem from="1557135269601" duration="10527000" />
-      <workItem from="1557212284761" duration="7776000" />
+      <workItem from="1557212284761" duration="13610000" />
+      <workItem from="1557242256819" duration="9110000" />
+      <workItem from="1557499900225" duration="1598000" />
+      <workItem from="1557845546090" duration="9049000" />
+      <workItem from="1557917428595" duration="334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23721000" />
+    <option name="totallyTimeSpent" value="49646000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2088" y="16" width="1484" height="1007" extended-state="0" />
+    <frame x="339" y="50" width="1291" height="825" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0744382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18602762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -217,8 +244,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6270023" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32947975" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27456647" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -228,7 +255,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32885906" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32833022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,41 +271,52 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/database/Movie.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/app/Filmueb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/Series.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ApplicationDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/ConsoleDataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/Actor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javastart/movieDatabase/model/Series.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
+        <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/ConsoleDataReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Filmueb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
