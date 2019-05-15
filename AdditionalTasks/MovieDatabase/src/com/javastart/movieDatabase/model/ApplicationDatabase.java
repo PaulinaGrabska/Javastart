@@ -111,7 +111,7 @@ public class ApplicationDatabase {
         } else {
             for (int i = 0; i < numberOfSeries; i++) {
                 System.out.printf("Series : \"%s\"\n Seasons: %d\n Episodes: %d\n Producent: %s\n Type: %s\n Description: %s\n Rating: %f\n\n",
-                        tvseries[i].getName(), tvseries[i].getNumberOfSeasons(), tvseries[i].getNumberOfEpisodes(), tvseries[i].getProducent(),
+                        tvseries[i].getName(), tvseries[i].getNumberOfSeasons(), tvseries[i].getNumberOfEpisodes(), tvseries[i].getProducer(),
                         tvseries[i].getType(), tvseries[i].getDescription(), tvseries[i].getRating());
             }
         }
