@@ -9,16 +9,31 @@ public class LongerLine {
         return (int)Math.sqrt((xLength*xLength + yLength*yLength));
     }
 
-    public void getLonger(Line l1, Line l2){
+    public Line getLonger(Line l1, Line l2){
         if(lineLength(l1)>lineLength(l2)){
-            System.out.println("The longer line -> TOP: " + l1.getTop().getX()+"," + l1.getTop().getY() + ", BOTTOM: " + l1.getBottom().getX()+"," + l1.getBottom().getY()
-            + " with length " + lineLength(l1));
+            return l1;
         }else if(lineLength(l1)==lineLength(l2)){
-            System.out.println("The lines are equal");
+            return null;
         }else{
-            System.out.println("The longer line -> TOP: " + l2.getTop().getX() + "," + l2.getTop().getY() + ", BOTTOM: " + l2.getBottom().getX() + "," + l2.getBottom().getY()+
-                    " with length " + lineLength(l2));
+            return l2;
         }
     }
 
 }
+
+
+/*
+    public Line getLonger(Line l1, Line l2){
+        if(lineLength(l1)>lineLength(l2)){
+            System.out.println("The longer line -> TOP: " + l1.getTop().getX()+"," + l1.getTop().getY() + ", BOTTOM: " + l1.getBottom().getX()+","
+                    + l1.getBottom().getY()
+            + " with length " + lineLength(l1));
+        }else if(lineLength(l1)==lineLength(l2)){
+            System.out.println("The lines are equal");
+        }else{
+            System.out.println("The longer line -> TOP: " + l2.getTop().getX() + "," + l2.getTop().getY() + ", BOTTOM: " + l2.getBottom().getX()
+                    + "," + l2.getBottom().getY()+
+                    " with length " + lineLength(l2));
+        }
+    }
+ */
