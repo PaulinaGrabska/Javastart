@@ -1,4 +1,7 @@
 package com.javastart.movieDatabase.model;
+import com.javastart.movieDatabase.db.ApplicationDatabase;
+import com.javastart.movieDatabase.io.ConsoleDataReader;
+
 import java.util.Scanner;
 
 /*
