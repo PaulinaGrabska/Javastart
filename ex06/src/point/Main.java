@@ -16,16 +16,11 @@ public class Main {
         int y = user.nextInt();
         user.nextLine();
 
-        Quarter quarter = new Quarter(new Point(x,y));
+        Quarter quarter = new Quarter();
 
-        String quart = quarter.whichQuarter();
+        String quart = quarter.whichQuarter(new Point(x,y));
 
-        if(quart!=null) {
-            System.out.println("The point lies in the " + quart + " quarter of the coordinate system.\n");
-        }else{
-            System.out.println("One of the coordinates of the point lies on at least one of the axes.\n");
-        }
-
+        System.out.println("The point lies in the " + quart + " of the coordinate system.\n");
 
     }
 }
