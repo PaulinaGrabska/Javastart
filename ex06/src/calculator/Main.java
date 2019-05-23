@@ -12,11 +12,9 @@ public class Main {
 
         System.out.println("Enter 1st number:");
         int a = user.nextInt();
-        user.nextLine();
 
         System.out.println("Enter 2nd number:");
         int b = user.nextInt();
-        user.nextLine();
 
         System.out.println(calc.compareNumbers(a,b));
     }
