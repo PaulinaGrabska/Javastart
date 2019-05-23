@@ -17,7 +17,6 @@ public class Main {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Enter " + (i+1) + " integer number: ");
             number = user.nextInt();
-            user.nextLine();
             numbers[i] = number;
             if((i+1)%2!=0){
                 sum+=number;
