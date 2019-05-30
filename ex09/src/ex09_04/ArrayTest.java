@@ -9,10 +9,10 @@ public class ArrayTest {
         ArrayComparator comparator = new ArrayComparator();
 
         int [] a={1,2,3};
-        int [] b={1,2,3};
+        int [] b={1,2,3,5};
 
         int [][] c={{1,2},{3,4}};
-        int [][] d={{1,2},{3,5}};
+        int [][] d={{1,2},{3,4}};
 
         System.out.println("Array a: " + Arrays.toString(a));
         System.out.println("Array b: " + Arrays.toString(b));
