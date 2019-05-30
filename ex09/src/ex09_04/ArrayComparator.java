@@ -8,8 +8,11 @@ public class ArrayComparator {
         if(a==null||b==null){
             throw new NullPointerException("One of the table is empty");
         }
+        if(a.length!=b.length){
+            return false;
+        }
         for (int i = 0; i <a.length ; i++) {
-            if(!(a[i]==b[i])||a.length!=b.length){
+            if(!(a[i]==b[i])){
                 return false;
             }
         }
@@ -22,10 +25,12 @@ public class ArrayComparator {
         if (a == null || b == null) {
             throw new NullPointerException("One of the table is empty");
         }
-
+        if(a.length!=b.length){
+            return false;
+        }
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length; j++) {
-                if (!(a[i][j] == b[i][j])||a.length!=b.length) {
+                if (!(a[i][j] == b[i][j])) {
                     return false;
                 }
             }
