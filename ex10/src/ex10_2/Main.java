@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Array 1 before:");
         printArray(array1);
 
-        reverseElements(array1, 5);
+        reverseElements(array1, 8);
 
         System.out.println("\nArray 1 after:");
         printArray(array1);
@@ -21,7 +21,7 @@ public class Main {
         System.out.println("\nArray 2 before:");
         printArray(array2);
 
-        reverseElements(array2, 5);
+        reverseElements(array2, 12);
 
         System.out.println("\nArray 2 after:");
         printArray(array2);
@@ -30,7 +30,7 @@ public class Main {
         System.out.println("\nArray 3 before:");
         printArray(array3);
 
-        reverseElements(array3, 5);
+        reverseElements(array3, 8);
 
         System.out.println("\nArray 3 after:");
         printArray(array3);
@@ -43,7 +43,7 @@ public class Main {
             System.out.println("The array is empty");
         }else{
             if(number>array.length){
-                System.out.println("The number is bigger that the number of elements in the array.");
+                System.out.println("\nThe number is bigger that the number of elements in the array.");
             }else {
                 int swap=0;
                 for (int i = 0; i < number / 2; i++) {

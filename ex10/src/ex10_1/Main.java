@@ -12,10 +12,12 @@ public class Main {
 
         Car[] cars = {car1, car2, truck1, truck2, truck3};
 
+        // we will check how far each vahicle can drive with 250 liters of fuel
+        double fuel = 50;
 
         System.out.println("All cars:");
         for (Car c: cars) {
-            System.out.println(c.toString());
+            System.out.println(c.toString() + ", with " + fuel + " l vehicle can drive " +  c.range(fuel) + " km");
         }
 
         for (Car c: cars) {
@@ -25,7 +27,7 @@ public class Main {
 
         System.out.println("\nAll cars with turned on air condition:");
         for (Car c: cars) {
-            System.out.println(c.toString());
+            System.out.println(c.toString()+ ", with " + fuel + " l vehicle can drive " +  c.range(fuel) + " km");
         }
 
     }

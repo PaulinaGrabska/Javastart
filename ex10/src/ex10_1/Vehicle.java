@@ -13,6 +13,10 @@ public class Vehicle {
         this.fuelConsumption = fuelConsumption;
     }
 
+    double range(double fuel){
+        return fuel/fuelConsumption*100;
+    }
+
 
     public String getName() {
         return name;
