@@ -4,9 +4,9 @@ public class Truck extends Car{
 
     private double cargoWeight;
 
-    public Truck(String name, double capacity, double fuelConsumption, boolean airConditionIsTurnOn, double cargoWeight) {
-        super(name, capacity, fuelConsumption, airConditionIsTurnOn);
-        setCargoWeight(cargoWeight);
+    public Truck(String name, double capacity, double fuelConsumption, double maxFuelConsumption, boolean airConditionIsTurnOn, double cargoWeight) {
+        super(name, capacity, fuelConsumption, maxFuelConsumption, airConditionIsTurnOn);
+        this.cargoWeight = cargoWeight;
     }
 
     public void setCargoWeight(double cargoWeight) {
@@ -18,13 +18,23 @@ public class Truck extends Car{
 
 
     @Override
-    void changeAirCondition(boolean change){
-        setAirConditionIsTurnOn(change);
-        if(isAirConditionIsTurnOn()==true){
-            setFuelConsumption(getFuelConsumption()+1.6);
-        }else{
-            setFuelConsumption(getFuelConsumption()-1.6);
+    boolean changeAirCondition(boolean change){
+        if(isAirConditionIsTurnOn()!=change) {
+            if (change) {
+                if (getFuelConsumption() + 1.6 <= getMaxFuelConsumption()) {
+                    setFuelConsumption(getFuelConsumption() + 1.6);
+                    setAirConditionIsTurnOn(change);
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                setFuelConsumption(getFuelConsumption() - 1.6);
+                setAirConditionIsTurnOn(change);
+                return true;
+            }
         }
+        return false;
     }
 
 

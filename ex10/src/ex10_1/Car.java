@@ -6,11 +6,10 @@ public class Car extends Vehicle{
     private boolean airConditionIsTurnOn;
 
 
-    public Car(String name, double capacity, double fuelConsumption, boolean airConditionIsTurnOn) {
-        super(name, capacity, fuelConsumption);
+    public Car(String name, double capacity, double fuelConsumption, double maxFuelConsumption, boolean airConditionIsTurnOn) {
+        super(name, capacity, fuelConsumption, maxFuelConsumption);
         this.airConditionIsTurnOn = airConditionIsTurnOn;
     }
-
 
     public boolean isAirConditionIsTurnOn() {
         return airConditionIsTurnOn;
@@ -22,17 +21,31 @@ public class Car extends Vehicle{
         this.airConditionIsTurnOn = airConditionIsTurnOn;
     }
 
-    void changeAirCondition(boolean change){
-        setAirConditionIsTurnOn(change);
-        if(airConditionIsTurnOn==true){
-            setFuelConsumption(getFuelConsumption()+0.8);
-        }else{
-            setFuelConsumption(getFuelConsumption()-0.8);
+    boolean changeAirCondition(boolean change){
+        if(airConditionIsTurnOn!=change) {
+            if (change){
+                if (getFuelConsumption() + 0.8 <= getMaxFuelConsumption()) {
+                    setFuelConsumption(getFuelConsumption() + 0.8);
+                    setAirConditionIsTurnOn(change);
+                    return true;
+                } else {
+                    return false;
+                }
+            }else{
+                setFuelConsumption(getFuelConsumption() - 0.8);
+                setAirConditionIsTurnOn(change);
+                return true;
+            }
         }
+        return false;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", air condition is turned on: " + airConditionIsTurnOn;
+        String aircond= "OFF";
+        if(airConditionIsTurnOn){
+            aircond= "ON";
+        }
+        return super.toString() + ", air condition is turned " + aircond;
     }
 }

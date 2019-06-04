@@ -5,18 +5,28 @@ public class Vehicle {
     private String name;
     private double capacity;
     private double fuelConsumption;
+    private double maxFuelConsumption;
 
 
-    public Vehicle(String name, double capacity, double fuelConsumption) {
+    public Vehicle(String name, double capacity, double fuelConsumption, double maxFuelConsumption) {
         this.name = name;
         this.capacity = capacity;
         this.fuelConsumption = fuelConsumption;
+        this.maxFuelConsumption = maxFuelConsumption;
     }
 
     double range(double fuel){
         return fuel/fuelConsumption*100;
     }
 
+
+    public double getMaxFuelConsumption() {
+        return maxFuelConsumption;
+    }
+
+    public void setMaxFuelConsumption(double maxFuelConsumption) {
+        this.maxFuelConsumption = maxFuelConsumption;
+    }
 
     public String getName() {
         return name;
@@ -46,6 +56,6 @@ public class Vehicle {
     public String toString() {
         return  name +
                 " - capacity: " + capacity +
-                " l , fuelConsumption: " + fuelConsumption + " l/100 km";
+                " l , fuel consumption: " + fuelConsumption + " l/100 km, " + "Max fuel cons. " + maxFuelConsumption + " l/100 km";
     }
 }
