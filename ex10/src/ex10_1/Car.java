@@ -20,13 +20,19 @@ public class Car extends Vehicle{
 
     public void setAirConditionIsTurnOn(boolean airConditionIsTurnOn) {
         this.airConditionIsTurnOn = airConditionIsTurnOn;
-        if(airConditionIsTurnOn){
+    }
+
+    void changeAirCondition(boolean change){
+        setAirConditionIsTurnOn(change);
+        if(airConditionIsTurnOn==true){
             setFuelConsumption(getFuelConsumption()+0.8);
+        }else{
+            setFuelConsumption(getFuelConsumption()-0.8);
         }
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", aircondition is turned on: " + airConditionIsTurnOn;
+        return super.toString() + ", air condition is turned on: " + airConditionIsTurnOn;
     }
 }
