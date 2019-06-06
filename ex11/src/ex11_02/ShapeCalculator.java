@@ -3,22 +3,47 @@ package ex11_02;
 public class ShapeCalculator extends LineCalc implements Calc2D,Calc3D {
 
     @Override
-    public double circleArea(Circle circle) {
-        return circle.getRadius()*circle.getRadius()*Math.PI;
+    public double shapeArea(GeometricShape shape) {
+        if (shape instanceof Circle){
+            Circle circle = (Circle) shape;
+            return circle.getRadius()*circle.getRadius()*Math.PI;
+        }else if(shape instanceof Rectangle){
+            Rectangle rectangle = (Rectangle) shape;
+            return rectangle.getSideA()*rectangle.getSideB();
+        }
+        return 0;
     }
 
     @Override
-    public double rectangleArea(Rectangle rectangle) {
-        return rectangle.getSideA()*rectangle.getSideB();
+    public double volume(Shape3D shape) {
+        if (shape instanceof Ball){
+            Ball ball = (Ball) shape;
+            return 4/3*Math.PI*Math.pow(ball.getRadius(),3);
+        }else if(shape instanceof Cube){
+            Cube cube= (Cube) shape;
+            return Math.pow(cube.getSideA(),3);
+        }
+        return 0;
     }
 
-    @Override
-    public double ballVolume(Ball ball) {
-        return 4/3*Math.PI*Math.pow(ball.getRadius(),3);
+    void printInfo(Shape shape){
+        if(shape instanceof Line2D) {
+            Line2D line = (Line2D) shape;
+            System.out.print("Line designated by the coordinates [" + line.getP1().getX() + ", " + line.getP1().getY() + "]["+
+                    line.getP2().getX() + ", " + line.getP2().getY() + "] has the length ");
+        }else if(shape instanceof Circle) {
+            Circle circle = (Circle) shape;
+            System.out.print("Circle with radius " + circle.getRadius() + " has the area ");
+        }else if(shape instanceof Rectangle) {
+            Rectangle rectangle = (Rectangle) shape;
+            System.out.print("Rectangle with sides " + rectangle.getSideB() + " and " + rectangle.getSideA() + " has the area ");
+        }else if(shape instanceof Cube) {
+            Cube cube = (Cube) shape;
+            System.out.print("Cube with side " + cube.getSideA()+ " has the volume ");
+        }else if(shape instanceof Ball) {
+            Ball ball = (Ball) shape;
+            System.out.print("Ball with radius " + ball.getRadius() + " has the volume ");
+        }
     }
 
-    @Override
-    public double cubeVolume(Cube cube) {
-        return Math.pow(cube.getSideA(),3);
-    }
 }

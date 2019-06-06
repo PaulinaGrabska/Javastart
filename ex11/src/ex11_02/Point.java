@@ -1,5 +1,7 @@
 package ex11_02;
 
+import java.util.Objects;
+
 public class Point {
     private double x;
     private double y;
@@ -24,4 +26,5 @@ public class Point {
     public void setY(double y) {
         this.y = y;
     }
+
 }

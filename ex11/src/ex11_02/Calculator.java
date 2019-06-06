@@ -13,11 +13,26 @@ public class Calculator {
         Cube cube = new Cube(4);
         ShapeCalculator shCalc = new ShapeCalculator();
 
-        System.out.println("Length of line " + lc.lineLength(line));
-        System.out.println("Circle area " + shCalc.circleArea(circle));
-        System.out.println("Rectangle area " + shCalc.rectangleArea(rectangle));
-        System.out.println("Ball volume " + shCalc.ballVolume(ball));
-        System.out.println("Cube volume " + shCalc.cubeVolume(cube));
+        Shape [] shapes = {line, circle, rectangle, ball, cube};
 
+        for (Shape s: shapes) {
+            shCalc.printInfo(s);
+            if (s instanceof Line2D) {
+                System.out.println(lc.lineLength((Line2D) s));
+            } else if (s instanceof GeometricShape) {
+                System.out.println(shCalc.shapeArea((GeometricShape) s));
+            } else if (s instanceof Shape3D) {
+                System.out.println(shCalc.volume((Shape3D) s));
+            }
+        }
+
+
+/*
+        System.out.println("Length of line " + lc.lineLength(line));
+        System.out.println("Circle area " + shCalc.shapeArea(circle));
+        System.out.println("Rectangle area " + shCalc.shapeArea(rectangle));
+        System.out.println("Ball volume " + shCalc.volume(ball));
+        System.out.println("Cube volume " + shCalc.volume(cube));
+*/
     }
 }
