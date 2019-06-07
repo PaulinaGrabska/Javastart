@@ -16,4 +16,8 @@ public class Circle extends GeometricShape {
         this.radius = radius;
     }
 
+    @Override
+    public String toString() {
+        return "Circle with radius " + getRadius() + " has the area ";
+    }
 }

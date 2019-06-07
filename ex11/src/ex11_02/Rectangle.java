@@ -25,4 +25,9 @@ public class Rectangle extends GeometricShape {
     public void setSideB(double sideB) {
         this.sideB = sideB;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle with sides " + getSideB() + " and " + getSideA() + " has the area " ;
+    }
 }

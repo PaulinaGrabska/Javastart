@@ -15,4 +15,9 @@ public class Cube extends Shape3D {
     public void setSideA(double sideA) {
         this.sideA = sideA;
     }
+
+    @Override
+    public String toString() {
+        return "Cube with side " + getSideA()+ " has the volume ";
+    }
 }

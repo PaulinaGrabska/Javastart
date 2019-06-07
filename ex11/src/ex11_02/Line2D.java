@@ -26,4 +26,10 @@ public class Line2D extends Shape2D {
     public void setP2(Point p2) {
         this.p2 = p2;
     }
+
+    @Override
+    public String toString() {
+        return "Line designated by the coordinates [" + getP1().getX() + ", " + getP1().getY() + "]["+
+                getP2().getX() + ", " + getP2().getY() + "] has the length ";
+    }
 }

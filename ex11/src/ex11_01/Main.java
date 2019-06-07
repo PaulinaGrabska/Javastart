@@ -6,42 +6,50 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int noDogs=0;
-        Dog [] dogs = new Dog [3];
-        boolean sameDog=false;
 
-        Scanner sc = new Scanner(System.in);
+        int noDogs = 0;
+        Dog[] dogs = new Dog[3];
 
-        //{new Dog("Latka", 15), new Dog("Ciapek", 5), new Dog("Azor", 7)};
-
-        while(noDogs<dogs.length) {
-            sameDog=false;
-            System.out.println("Enter name of dog: ");
-            String name = sc.nextLine();
-
-            System.out.println("Enter age of dog: ");
-            int age = sc.nextInt();
-            sc.nextLine();
-
-            Dog newDog = new Dog(name, age);
-            if(noDogs>0) {
-                for (int i = 0; i <noDogs ; i++) {
-                    if (dogs[i].equals(newDog)) {
-                        System.out.println("This dog already exist in table. Try again");
-                        sameDog = true;
-                    }
-                }
-            }
-            if (!sameDog) {
-                dogs[noDogs] = newDog;
+        while (noDogs < dogs.length) {
+            Dog newDog = createDog();
+            if (!inTable(dogs, newDog)) {
+                addDog(dogs, newDog, noDogs);
                 noDogs++;
+            } else {
+                System.out.println("This dog already exist in table. Try again");
             }
         }
 
-        if(noDogs>=dogs.length){
+        if (noDogs >= dogs.length) {
             System.out.println("Your table with dogs is full.\n All dogs:");
             System.out.println(Arrays.toString(dogs));
         }
-
     }
+
+
+    static boolean inTable(Dog [] dogs, Dog dog){
+        for (int i = 0; i <dogs.length ; i++) {
+            if (dogs[i]!=null&&dogs[i].equals(dog)) {
+                return true;
+            }
+        }return false;
+    }
+
+    static Dog createDog(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name of dog: ");
+        String name = sc.nextLine();
+
+        System.out.println("Enter age of dog: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+
+       return new Dog(name, age);
+    }
+
+    static void addDog(Dog [] dogs,Dog dog, int noDogs){
+        dogs[noDogs] = dog;
+    }
+
+
 }

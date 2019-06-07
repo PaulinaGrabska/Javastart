@@ -27,6 +27,20 @@ public class ShapeCalculator extends LineCalc implements Calc2D,Calc3D {
     }
 
     void printInfo(Shape shape){
+            System.out.print(shape.toString());
+            if(shape instanceof Line2D) {
+                Line2D line = (Line2D) shape;
+                System.out.print(lineLength(line));
+            }else if(shape instanceof GeometricShape) {
+                GeometricShape gs = (GeometricShape) shape;
+                System.out.print(shapeArea(gs));
+            }else if(shape instanceof Shape3D) {
+                Shape3D s3D = (Shape3D) shape;
+                System.out.print(volume(s3D));
+            }
+    }
+/*
+    void printInfo(Shape shape){
         if(shape instanceof Line2D) {
             Line2D line = (Line2D) shape;
             System.out.print("Line designated by the coordinates [" + line.getP1().getX() + ", " + line.getP1().getY() + "]["+
@@ -45,5 +59,5 @@ public class ShapeCalculator extends LineCalc implements Calc2D,Calc3D {
             System.out.print("Ball with radius " + ball.getRadius() + " has the volume ");
         }
     }
-
+*/
 }
