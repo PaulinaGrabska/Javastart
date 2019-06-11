@@ -1,8 +1,9 @@
 package com.javastart.movieDatabase.controller;
+import com.javastart.movieDatabase.controller.exceptions.OptionNotExistsException;
 import com.javastart.movieDatabase.db.ApplicationDatabase;
-import com.javastart.movieDatabase.io.ConsoleDataReader;
-
-import java.util.Scanner;
+import com.javastart.movieDatabase.db.exceptions.DuplicateException;
+import com.javastart.movieDatabase.io.ApplicationIO;
+import com.javastart.movieDatabase.io.exceptions.IncorrectDataException;
 
 /*
 metoda mainLoop(), w której zdefiniowana będzie pętla z wyborem poszczególnych opcji, interakcja
@@ -15,14 +16,15 @@ Zamiast tego tam gdzie to możliwe wydziel mniejsze metody (najlepiej prywatne),
 public class ApplicationController {
 
     private ApplicationDatabase adb = new ApplicationDatabase();
-    private ConsoleDataReader cdr = new ConsoleDataReader();
+    private ApplicationIO cdr = new ApplicationIO();
 
 
-    public void mainLoop(){
+    public void mainLoop() {
         Option.showOptions();
         int opt;
 
-        while((opt=cdr.getOption())!=0) {
+        while ((opt = cdr.getOption()) != 0) {
+            try {
                 switch (Option.convert(opt)) {
                     case ADD_ACTOR:
                         adb.addActor(cdr.getActorData());
@@ -39,16 +41,18 @@ public class ApplicationController {
                     case EXIT:
                         System.out.println("Exit filmueb Application");
                         break;
-
                     default:
                         System.out.println("You've entered the wrong value of option. Try again.");
                 }
+
+            } catch (IncorrectDataException | OptionNotExistsException | DuplicateException e) {
+                System.err.println(e.getMessage());
+            }finally{
                 Option.showOptions();
             }
-
-            System.out.println("Exit filmueb Application");
         }
-
+        System.out.println("Exit filmueb Application");
+    }
 
 
     private void whatToDisplay(){

@@ -1,5 +1,7 @@
 package com.javastart.movieDatabase.model;
 
+import com.javastart.movieDatabase.model.exceptions.GenreNotExistsException;
+
 public enum Genre {
     COMEDY("Komedia"),SCI_FI( "Scifi"), DOCUMENTARY("Documentary"),
     ACTION("Action"),THRILLER( "Thriller"), HORROR("Horror");
@@ -21,7 +23,7 @@ public enum Genre {
                 return g;
             }
         }
-        return null;
+        throw new GenreNotExistsException();
     }
 
 }

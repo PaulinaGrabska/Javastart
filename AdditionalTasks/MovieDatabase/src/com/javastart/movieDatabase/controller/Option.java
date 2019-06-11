@@ -1,5 +1,7 @@
 package com.javastart.movieDatabase.controller;
 
+import com.javastart.movieDatabase.controller.exceptions.OptionNotExistsException;
+
 public enum Option {
 
     EXIT (0),ADD_ACTOR (1), ADD_MOVIE (2), ADD_TVSERIES (3), DISPLAY_INFO (4),DISPLAY_ACTORS (1),DISPLAY_MOVIES (2),
@@ -22,7 +24,7 @@ public enum Option {
                 return o;
             }
         }
-        return null;
+        throw new OptionNotExistsException();
     }
 
 

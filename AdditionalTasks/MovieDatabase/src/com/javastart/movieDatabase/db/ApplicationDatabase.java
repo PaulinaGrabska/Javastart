@@ -7,6 +7,7 @@ które pozwolą dodać kolejny film, serial lub aktora oraz zwrócą odpowiedni�
 Klasa ta nie powinna zajmować się wczytywaniem danych, a jedynie ich przechowywaniem.
  */
 
+import com.javastart.movieDatabase.db.exceptions.DuplicateException;
 import com.javastart.movieDatabase.model.*;
 
 public class ApplicationDatabase {
@@ -125,7 +126,7 @@ public class ApplicationDatabase {
     public <T> boolean checkContent(T obj, T [] array){
         for (T o:array) {
             if (o!=null && o.equals(obj)){
-                return true;
+                throw new DuplicateException();
             }
         }
         return false;

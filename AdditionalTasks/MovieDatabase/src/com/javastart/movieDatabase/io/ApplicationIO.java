@@ -1,21 +1,24 @@
 package com.javastart.movieDatabase.io;
+import com.javastart.movieDatabase.io.exceptions.IncorrectDataException;
 import com.javastart.movieDatabase.model.Actor;
 import com.javastart.movieDatabase.model.Genre;
 import com.javastart.movieDatabase.model.Movie;
 import com.javastart.movieDatabase.model.Series;
+import com.javastart.movieDatabase.model.exceptions.GenreNotExistsException;
 
 import java.util.Scanner;
+import java.util.zip.DataFormatException;
 /*
 korzystając z klasy Scanner wczytają od użytkownika informacje odpowiednio o filmie, serialu lub aktorze i
 zwrócą obiekt odpowiedniego typu.
 Jeśli użytkownik poda nieprawidłową wartość (np. liczbę mniejszą od zera tam gdzie nie ma to sensu), to w konsoli
 powinien wyświetlić się komunikat o tym, że obiektu nie udało się utworzyć, a metoda powinna zwrócić wartość null.
 
-W ConsoleDataReader nie masz tego zabezpieczenia, że np. ja ktoś poda rok -100, to zamiast tworzyć obiekt, powinnaś zwrócić null. Jak zwrócisz null,
+W ApplicationIO nie masz tego zabezpieczenia, że np. ja ktoś poda rok -100, to zamiast tworzyć obiekt, powinnaś zwrócić null. Jak zwrócisz null,
 to w klasie ApplicationController powinnaś mieć ifa, który sprawi, że taki błędny obiekt nie zostanie dodany do bazy.
  */
 
-public class ConsoleDataReader {
+public class ApplicationIO {
 
     Scanner user = new Scanner(System.in);
 
@@ -31,12 +34,18 @@ public class ConsoleDataReader {
             System.out.println("Enter Production Year:");
             int productionYear = user.nextInt();
             if(productionYear<=0){
-                return null;
+                throw new IncorrectDataException();
             }
             user.nextLine();
 
-            System.out.println("Enter type of Movie (Comedy/Scifi/Documentary/Action,/hriller/Horror): ");
-            String genre = user.nextLine();
+            System.out.println("Enter type of Movie (Comedy/Scifi/Documentary/Action,/Thriller/Horror): ");
+            String genre;
+            try{
+                 genre = user.nextLine();
+            }
+            catch(GenreNotExistsException e){
+                throw new IncorrectDataException();
+            }
 
             System.out.println("Enter the description:");
             String description = user.nextLine();
@@ -47,6 +56,7 @@ public class ConsoleDataReader {
             if (rating < 0 || rating > 10) {
                 return null;
             }
+
 
             return new Movie(movieName, director, productionYear, Genre.convert(genre), description, rating);
     }
@@ -68,8 +78,14 @@ public class ConsoleDataReader {
             System.out.println("Enter the Producent name:");
             String producent = user.nextLine();
 
-            System.out.println("Enter the type of Tv Series (Comedy/Scifi/Documentary/Action,/hriller/Horror): ");
-            String genre = user.nextLine();
+            System.out.println("Enter the type of Tv Series (Comedy/Scifi/Documentary/Action,/Thriller/Horror): ");
+            String genre;
+            try{
+                genre = user.nextLine();
+            }
+            catch(GenreNotExistsException e){
+                throw new IncorrectDataException();
+            }
 
             System.out.println("Enter the description:");
             String description = user.nextLine();
@@ -78,7 +94,7 @@ public class ConsoleDataReader {
             double rating = user.nextDouble();
             user.nextLine();
             if (rating < 0 || rating > 10){
-                return null;
+                throw new IncorrectDataException();
             }
 
             return new Series(seriesName, episodes, seasons, producent, Genre.convert(genre), description, rating);
