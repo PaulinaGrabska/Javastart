@@ -6,9 +6,9 @@ public class Movie extends Item {
     private int productionYear;
 
 
-    public Movie(String name, String director, int productionYear, String type, String description, double rating){
+    public Movie(String name, String director, int productionYear, Genre genre, String description, double rating){
 
-        super(name, description,type,rating);
+        super(name,genre, description,rating);
         this.director = director;
         this.productionYear = productionYear;
     }
@@ -26,8 +26,8 @@ public class Movie extends Item {
         return productionYear;
     }
 
-    public String getType() {
-        return type;
+    public Genre getGenre() {
+        return genre;
     }
 
     public String getDescription() {
@@ -36,6 +36,10 @@ public class Movie extends Item {
 
     public double getRating() {
         return rating;
+    }
+
+    public String toString(){
+        return "Movie: " + super.toString() + ", Director: "+ director+ ", Production Year: "+ productionYear;
     }
 
 }

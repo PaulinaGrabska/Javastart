@@ -1,4 +1,4 @@
-package com.javastart.movieDatabase.model;
+package com.javastart.movieDatabase.controller;
 import com.javastart.movieDatabase.db.ApplicationDatabase;
 import com.javastart.movieDatabase.io.ConsoleDataReader;
 
@@ -14,39 +14,36 @@ Zamiast tego tam gdzie to możliwe wydziel mniejsze metody (najlepiej prywatne),
 
 public class ApplicationController {
 
-    Scanner input = new Scanner(System.in);
-
-    ApplicationDatabase adb = new ApplicationDatabase();
-    ConsoleDataReader cdr = new ConsoleDataReader();
-    Option option = new Option();
+    private ApplicationDatabase adb = new ApplicationDatabase();
+    private ConsoleDataReader cdr = new ConsoleDataReader();
 
 
     public void mainLoop(){
-        option.showOptions();
+        Option.showOptions();
         int opt;
 
         while((opt=cdr.getOption())!=0) {
-                switch (opt) {
-                    case Option.ADD_ACTOR:
+                switch (Option.convert(opt)) {
+                    case ADD_ACTOR:
                         adb.addActor(cdr.getActorData());
                         break;
-                    case Option.ADD_MOVIE:
+                    case ADD_MOVIE:
                         adb.addMovie(cdr.getMovieData());
                         break;
-                    case Option.ADD_TVSERIES:
+                    case ADD_TVSERIES:
                         adb.addSeries(cdr.getSeriesData());
                         break;
-                    case Option.DISPLAY_INFO:
+                    case DISPLAY_INFO:
                         whatToDisplay();
                         break;
-                    case Option.EXIT:
+                    case EXIT:
                         System.out.println("Exit filmueb Application");
                         break;
 
                     default:
                         System.out.println("You've entered the wrong value of option. Try again.");
                 }
-                option.showOptions();
+                Option.showOptions();
             }
 
             System.out.println("Exit filmueb Application");
@@ -56,17 +53,17 @@ public class ApplicationController {
 
     private void whatToDisplay(){
 
-        option.displayOptions();
+        Option.displayOptions();
         int option =cdr.getOption();
 
-            switch (option) {
-                case Option.DISPLAY_ACTORS:
+            switch (Option.convert(option)) {
+                case DISPLAY_ACTORS:
                     adb.displayActors();
                     break;
-                case Option.DISPLAY_MOVIES:
+                case DISPLAY_MOVIES:
                    adb.displayMovies();
                     break;
-                case Option.DISPLAY_TVSERIES:
+                case DISPLAY_TVSERIES:
                     adb.displaySeries();
                     break;
                 default:

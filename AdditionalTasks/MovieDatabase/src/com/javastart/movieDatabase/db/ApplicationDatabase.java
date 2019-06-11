@@ -1,10 +1,13 @@
-package com.javastart.movieDatabase.model;
+package com.javastart.movieDatabase.db;
+
 /*
 Aplikację przebuduj w taki sposób, aby dane przechowywane były teraz w klasie ApplicationDatabase.
 Powinna ona posiadać pola będące tablicami – filmów, seriali i aktorów. W klasie tej powinny znajdować się także metody,
 które pozwolą dodać kolejny film, serial lub aktora oraz zwrócą odpowiednią tablicę filmów, seriali lub aktorów.
 Klasa ta nie powinna zajmować się wczytywaniem danych, a jedynie ich przechowywaniem.
  */
+
+import com.javastart.movieDatabase.model.*;
 
 public class ApplicationDatabase {
 
@@ -16,62 +19,66 @@ public class ApplicationDatabase {
     private int numberOfMovies;
     private int numberOfSeries;
 
-    Actor[] actors;
-    Movie[] movies;
-    Series[] tvseries;
+    private Actor[] actors;
+    private Movie[] movies;
+    private Series[] tvseries;
 
     public ApplicationDatabase(){
         actors = new Actor[MAX_NR_OF_ACTORS];
         movies = new Movie[MAX_NR_OF_MOVIES];
         tvseries = new Series[MAX_NR_OF_SERIES];
-
-        numberOfActors = 0;
-        numberOfMovies = 0;
-        numberOfSeries = 0;
     }
 
 
 // add an actor
     public void addActor(Actor actor) {
-        if(numberOfActors==MAX_NR_OF_ACTORS){
-            System.out.println("The number of actors in table has been exceeded. The actor can not be added.");
+        if(!checkContent(actor,actors)) {
+            if (numberOfActors == MAX_NR_OF_ACTORS) {
+                System.out.println("The number of actors in table has been exceeded. The actor can not be added.");
+            } else {
+                actors[numberOfActors] = actor;
+
+                System.out.println("The actor has been added");
+                numberOfActors++;
+            }
         }else{
-            actors[numberOfActors] = actor;
-            System.out.println("The actor has been added");
-            numberOfActors++;
+            System.out.println("This actor already exist");
         }
+
     }
 
 
 // add a movie
     public void addMovie(Movie movie) {
-        if(numberOfMovies==MAX_NR_OF_MOVIES){
-            System.out.println("The number of movies in table has been exceeded. The movie can not be added.");
-        }else {
-            if (movie.rating < 0 || movie.rating > 10) {
-                movies[numberOfMovies] = null;
-                System.out.println("You've entered the wrong value of rating. The movie is null");
+        if(!checkContent(movie,movies)) {
+            if (numberOfMovies == MAX_NR_OF_MOVIES) {
+                System.out.println("The number of movies in table has been exceeded. The movie can not be added.");
+            } else if (movie == null) {
+                System.out.println("You've entered the wrong value of movie data. The movie is null and can not be added.");
             } else {
                 movies[numberOfMovies] = movie;
                 System.out.println("The movie has been added");
                 numberOfMovies++;
             }
+        }else{
+            System.out.println("This movie already exist");
         }
     }
 
 // add a tv tvseries
     public void addSeries(Series series){
-        if(numberOfSeries==MAX_NR_OF_SERIES){
-            System.out.println("The number of Tv Series in table has been exceeded. The Tv Series can not be added.");
-        }else {
-            if (series.rating < 0 || series.rating > 10) {
-                tvseries[numberOfSeries] = null;
-                System.out.println("You've entered the wrong value of rating. The Tv Series is null");
+        if(!checkContent(series,tvseries)) {
+            if(numberOfSeries==MAX_NR_OF_SERIES){
+                System.out.println("The number of Tv Series in table has been exceeded. The Tv Series can not be added.");
+            }else if(series==null){
+                System.out.println("You've entered the wrong value of rating. The Tv Series is null and can not be added.");
             } else {
                 tvseries[numberOfSeries] = series;
                 System.out.println("The tv tvseries has been added");
                 numberOfSeries++;
             }
+        }else{
+            System.out.println("This Tv series already exist");
         }
     }
 
@@ -83,7 +90,7 @@ public class ApplicationDatabase {
             System.out.println("    The model with actors is empty.");
         } else {
             for (int i = 0; i < numberOfActors; i++) {
-                System.out.printf(" %s %s from %s\n", actors[i].getFirstName(), actors[i].getLastName(), actors[i].getCountryOfOrigin());
+                actors[i].toString();
             }
         }
         System.out.println();
@@ -96,9 +103,7 @@ public class ApplicationDatabase {
             System.out.println("    The model with movies is empty.");
         } else {
             for (int i = 0; i < numberOfMovies; i++) {
-                System.out.printf("Movie : \"%s\"\n Director: %s\n Production Year: %d\n Type: %s\n Description: %s\n Rating: %f\n\n",
-                        movies[i].getName(), movies[i].getDirector(), movies[i].getProductionYear(), movies[i].getDescription(), movies[i].getType()
-                        , movies[i].getRating());
+                movies[i].toString();
             }
         }
         System.out.println();
@@ -110,12 +115,20 @@ public class ApplicationDatabase {
             System.out.println("    The model with tv tvseries is empty.");
         } else {
             for (int i = 0; i < numberOfSeries; i++) {
-                System.out.printf("Series : \"%s\"\n Seasons: %d\n Episodes: %d\n Producent: %s\n Type: %s\n Description: %s\n Rating: %f\n\n",
-                        tvseries[i].getName(), tvseries[i].getNumberOfSeasons(), tvseries[i].getNumberOfEpisodes(), tvseries[i].getProducer(),
-                        tvseries[i].getType(), tvseries[i].getDescription(), tvseries[i].getRating());
+                tvseries[i].toString();
             }
         }
         System.out.println();
+    }
+
+
+    public <T> boolean checkContent(T obj, T [] array){
+        for (T o:array) {
+            if (o!=null && o.equals(obj)){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
