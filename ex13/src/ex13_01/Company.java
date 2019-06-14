@@ -34,7 +34,7 @@ public class Company {
     }
 
 
-    void countDepartamentEmployees(Person[] people, String department) {
+    int countDepartamentEmployees(Person[] people, String department) {
         int i=0;
 
         for (Person p: people) {
@@ -42,9 +42,7 @@ public class Company {
                 i++;
             }
         }
-        System.out.println(department + " - " + i);
-
-
+        return i;
     }
 
 }

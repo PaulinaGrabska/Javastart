@@ -19,11 +19,9 @@ public class Main {
         System.out.println("Smallest salary " + c.smallestSalary(people));
         System.out.println("Biggest salary " + c.biggestSalary(people));
         System.out.println("Number of employees in each department:" );
-        c.countDepartamentEmployees(people, "it");
-        c.countDepartamentEmployees(people, "Support");
-        c.countDepartamentEmployees(people, "Management");
-
-
+        System.out.println("it - " + c.countDepartamentEmployees(people, "it"));
+        System.out.println("Support - " + c.countDepartamentEmployees(people, "Support"));
+        System.out.println("Management - " + c.countDepartamentEmployees(people, "Management"));
     }
 
 
