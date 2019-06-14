@@ -11,8 +11,7 @@ public class Main {
 
         String file = "employees.csv";
 
-        int lines = countLines(file);
-        Person [] people = readFile(file,lines);
+        Person [] people = readFile(file);
 
         Company c = new Company();
 
@@ -20,13 +19,16 @@ public class Main {
         System.out.println("Smallest salary " + c.smallestSalary(people));
         System.out.println("Biggest salary " + c.biggestSalary(people));
         System.out.println("Number of employees in each department:" );
-        c.employeesInDepartment(people);
+        c.countDepartamentEmployees(people, "it");
+        c.countDepartamentEmployees(people, "Support");
+        c.countDepartamentEmployees(people, "Management");
 
 
     }
 
 
-    static Person [] readFile(String file, int lines){
+    static Person [] readFile(String file){
+        int lines = countLines(file);
         Person [] people = new Person[lines];
         int pep=0;
         try(BufferedReader br = new BufferedReader(new FileReader(file));){

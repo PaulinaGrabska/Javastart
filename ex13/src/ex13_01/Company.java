@@ -33,27 +33,17 @@ public class Company {
         return biggestSalary;
     }
 
-    String createDepartment(Person p) {
-        return "Department: " + p.getDepartment();
-    }
 
-    void employeesInDepartment(Person[] people) {
-        int it=0;
-        int management=0;
-        int support=0;
+    void countDepartamentEmployees(Person[] people, String department) {
+        int i=0;
 
         for (Person p: people) {
-            if(p.getDepartment().equals("it")) {
-                it++;
-            }else if(p.getDepartment().equals("Management")){
-                management++;
-            }else{
-                support++;
+            if(p.getDepartment().equals(department)) {
+                i++;
             }
         }
-        System.out.println("It - " + it);
-        System.out.println("Management - " + management);
-        System.out.println("Support - " + support);
+        System.out.println(department + " - " + i);
+
 
     }
 
