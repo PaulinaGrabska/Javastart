@@ -6,13 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 1};
-        int N = 3;
-        System.out.println("N is: " + N);
+        int n = 3;
+        System.out.println("N is: " + n);
 
         try {
             System.out.print("[");
-            for ( int n :sumArray(numbers, N)) {
-                System.out.print(n + " ");
+            for ( int i :sumArray(numbers, n)) {
+                System.out.print(i + " ");
             }
             System.out.println("]");
         } catch (ArrayIndexOutOfBoundsException | NumberOutOfBoundsException e) {
@@ -20,21 +20,21 @@ public class Main {
         }
     }
 
-    static int[] sumArray(int[] tab, int N) {
+    static int[] sumArray(int[] tab, int n) {
         int[] sum;
-        if (N > tab.length) {
-            throw new ArrayIndexOutOfBoundsException("Array has only " + tab.length + " elements, " + tab.length + " < " + N);
+        if (n > tab.length) {
+            throw new ArrayIndexOutOfBoundsException("Array has only " + tab.length + " elements, " + tab.length + " < " + n);
         }
 
-        if (N <1 || N > tab.length/2) {
+        if (n <1 || n > tab.length/2) {
             throw new NumberOutOfBoundsException();
         } else {
-            sum = new int[N];
-            int parts = tab.length / N;
-            int rest = tab.length % N;
+            sum = new int[n];
+            int parts = tab.length / n;
+            int rest = tab.length % n;
             int rest2 = 0;
             int elements = 0;
-            for (int i = 0; i < N; i++) {
+            for (int i = 0; i < n; i++) {
                 for (int j = 0; j < parts; j++) {
                     sum[i] += tab[elements];
                     elements++;
