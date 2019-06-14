@@ -9,8 +9,8 @@ public class PersonCreation {
 
     void createPerson(){
         System.out.println("Enter first name: ");
-        String fn = sc.nextLine();
-        if(fn.length()<2||fn==null){
+        String fn;
+        if((fn= sc.nextLine()).length()<2||fn==null){
             throw new NameUndefinedException();
         }
 

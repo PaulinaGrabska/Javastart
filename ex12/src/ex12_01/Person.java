@@ -1,24 +1,27 @@
 package ex12_01;
 //Person(firstName, lastName, age, pesel)
 public class Person{
-    private String firstaName;
+    private String firstName;
     private String lastName;
     private String pesel;
     private int age;
 
-    public Person(String firstaName, String lastName, String pesel, int age) {
-        this.firstaName = firstaName;
-        this.lastName = lastName;
-        this.pesel = pesel;
-        this.age = age;
+    public Person(String firstName, String lastName, String pesel, int age) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setPesel(pesel);
+        setAge(age);
     }
 
-    public String getFirstaName() {
-        return firstaName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstaName(String firstaName) {
-        this.firstaName = firstaName;
+    public void setFirstName(String firstName) {
+        if(firstName.length()<2||firstName==null){
+            throw new NameUndefinedException();
+        }else
+            this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -26,7 +29,10 @@ public class Person{
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        if(lastName.length()<2||lastName==null){
+            throw new NameUndefinedException();
+        }else
+            this.lastName = lastName;
     }
 
     public String getPesel() {
@@ -42,11 +48,14 @@ public class Person{
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age<1){
+            throw new IncorrectAgeException();
+        }else
+            this.age = age;
     }
 
     @Override
     public String toString() {
-        return firstaName + " " + lastName + " " + ", pesel:" + pesel + ", age: " + age;
+        return firstName + " " + lastName + " " + ", pesel:" + pesel + ", age: " + age;
     }
 }
