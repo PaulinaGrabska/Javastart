@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f24541da-4f8b-436f-95b1-d6c622106d79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ex16_01/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/out/production/MovieDatabase/com/javastart/movieDatabase/app/Filmueb.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/out/production/MovieDatabase/com/javastart/movieDatabase/app/Filmueb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/out/production/MovieDatabase/com/javastart/movieDatabase/model/Actor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AdditionalTasks/MovieDatabase/out/production/MovieDatabase/com/javastart/movieDatabase/model/Actor.class" afterDir="false" />
@@ -43,12 +42,7 @@
       <change beforePath="$PROJECT_DIR$/../ex14/numbers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ex14/numbers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex15/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex15/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex15/countries.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../ex15/countries.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/src/ex15_02/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex15/src/ex15_02/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/src/ex15_02/InspectionStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex15/src/ex15_02/InspectionStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/src/ex15_02/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex15/src/ex15_02/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex16_01/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex16_01/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex16_01/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex16_01/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ex16_01/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex16_01/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/stats.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -75,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex16_01/Result.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="714">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#252#253#0" expanded="true" />
                 <element signature="e#279#280#0" expanded="true" />
@@ -86,14 +80,12 @@
                 <element signature="e#410#411#0" expanded="true" />
                 <element signature="e#451#452#0" expanded="true" />
                 <element signature="e#487#488#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stats.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -117,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ex16_01/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state>
+              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -145,9 +137,9 @@
         <option value="$PROJECT_DIR$/src/ex16_01/Player.java" />
         <option value="$PROJECT_DIR$/stats.csv" />
         <option value="$PROJECT_DIR$/src/ex16_01/Main.java" />
-        <option value="$PROJECT_DIR$/src/ex16_01/Result.java" />
         <option value="$PROJECT_DIR$/src/ex16_01/Stats.java" />
         <option value="$PROJECT_DIR$/src/ex16_01/Results.java" />
+        <option value="$PROJECT_DIR$/src/ex16_01/Result.java" />
       </list>
     </option>
   </component>
@@ -245,18 +237,17 @@
       <option name="presentableId" value="Default" />
       <updated>1561928660949</updated>
       <workItem from="1561928663279" duration="1895000" />
-      <workItem from="1562054067711" duration="2806000" />
+      <workItem from="1562054067711" duration="3763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4701000" />
+    <option name="totallyTimeSpent" value="5658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="356" y="173" width="1270" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24958678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -265,7 +256,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.50332224" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51328903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -322,35 +313,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stats.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ex16_01/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex16_01/Results.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -368,11 +330,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ex16_01/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ex16_01/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
   </component>

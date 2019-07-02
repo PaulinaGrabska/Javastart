@@ -1,6 +1,6 @@
 package ex16_01;
 
-public class Result implements Comparable{
+public class Result implements Comparable<Result>{
 
     private String name;
     private int result;
@@ -27,17 +27,16 @@ public class Result implements Comparable{
     }
 
 
-//    public int compareTo(Result o) {
-//        if(this.result>o.result)
-//            return 1;
-//        else if(this.result==o.result)
-//            return 0;
-//        else
-//            return -1;
-//    }
-
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Result o) {
+        if(this.result>o.result)
+            return 1;
+        else if(this.result==o.result)
+            return 0;
+        else
+            return -1;
     }
+
+
+
 }
