@@ -4,18 +4,27 @@ import java.util.*;
 
 public class Results {
 
-    static TreeSet<Integer> loadResults(){
-        TreeSet < Integer> set = new TreeSet<>();
+    static List<Result> loadResults(){
+ //       TreeSet < Integer> set = new TreeSet<>();
+        List <Result> list = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        String result;
+        String result=null;
+        String name=null;
 
-        System.out.println("Write result of player. If you want to stop, write \"STOP\"");
-        while(!(result=sc.nextLine()).equals("STOP")){
-            set.add(Integer.valueOf(result));
-            System.out.println("Write another result or write \"STOP\"");
 
+        do{
+            System.out.println("Write name of result. If you want to stop, write \"STOP\"");
+            name=sc.nextLine();
+
+            System.out.println("Write value of result. If you want to stop, write \"STOP\"");
+            result=sc.nextLine();
+
+            list.add(new Result(name, Integer.valueOf(result)));
         }
-        return set;
+        while(!((name.equals("STOP"))||((result.equals("STOP")))));
+
+        Collections.sort(list);
+        return list;
     }
 
 }
