@@ -4,21 +4,18 @@ package ex15_02;
 - po wciśnięciu 2 z kolejki powinien zostać pobrany kolejny pojazd, który zostanie poddany przeglądowi. */
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class InspectionStation {
 
-    private LinkedList <Car> cars;
+    private Queue <Car> cars;
 
     public InspectionStation() {
         cars=new LinkedList<>();
     }
 
-    public LinkedList<Car> getCars() {
+    public Queue<Car> getCars() {
         return cars;
-    }
-
-    public void setCars(LinkedList<Car> cars) {
-        this.cars = cars;
     }
 
 

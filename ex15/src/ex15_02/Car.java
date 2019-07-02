@@ -9,11 +9,11 @@ package ex15_02;
  */
 
 public class Car {
-    String type;
-    String brand;
-    int year;
-    int mileage;
-    String VIN;
+    private String type;
+    private String brand;
+    private int year;
+    private int mileage;
+    private String VIN;
 
     public Car(String type, String brand, int year, int mileage, String VIN) {
         this.type = type;

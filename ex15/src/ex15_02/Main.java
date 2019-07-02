@@ -1,14 +1,12 @@
 package ex15_02;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
 
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
 
        InspectionStation is = new InspectionStation();
 
@@ -18,6 +16,7 @@ public class Main {
 
 
         int option;
+
         System.out.println(is.toString());
         showOptions();
 
@@ -33,14 +32,11 @@ public class Main {
             }
             showOptions();
         }
-
-        if(option==0)
-            System.out.println("End of inspection");
+           System.out.println("End of inspection");
     }
 
 
     static Car createCar(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter type: ");
         String type = sc.nextLine();
         System.out.println("Enter brand: ");
@@ -51,6 +47,7 @@ public class Main {
         int mileage = sc.nextInt();
         System.out.println("Enter VIN: ");
         String vin = sc.nextLine();
+
         return new Car(type,brand,year,mileage,vin);
     }
 
